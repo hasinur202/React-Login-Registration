@@ -1,0 +1,159 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #3fbbc0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #65c9cd;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+
+  button[type=submit] {
+    width: 100%;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+  button[type=button] {
+    width: 100%;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .section-title {
+    text-align: left !important;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #f7fcfc;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  /* text-transform: uppercase; */
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+.main-content .php-email-form {
+  width: 100%;
+}
+.main-content .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+.main-content .php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+.main-content .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+.main-content .php-email-form .error-message br + br {
+  margin-top: 25px;
+}
+.main-content .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+.main-content .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+.main-content .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+.main-content .php-email-form input, .main-content .php-email-form textarea, .main-content .php-email-form select {
+  border-radius: 20px;
+  box-shadow: none;
+  font-size: 14px;
+  padding: 10px !important;
+}
+.main-content .php-email-form input:focus, .main-content .php-email-form textarea:focus, .main-content .php-email-form select:focus {
+  border-color: #3fbbc0;
+}
+.main-content .php-email-form input, .main-content .php-email-form select {
+  height: 60px;
+}
+.main-content .php-email-form textarea {
+  padding: 10px 12px;
+}
+button[type=submit] {
+  background: #3fbbc0;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+button[type=button] {
+  /* background: #3fbbc0; */
+  border: 1px solid #ddd;
+  padding: 10px 35px;
+  color: #333;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+button[type=submit]:hover {
+  background: #52c2c6;
+}
