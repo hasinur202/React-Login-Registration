@@ -4,6 +4,9 @@ import initializeAuthentication from './../Pages/Login/Firebase/firebase.init';
 
 initializeAuthentication();
 
+const fbProvider = new FacebookAuthProvider();
+const googleProvider = new GoogleAuthProvider();
+
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
@@ -12,19 +15,17 @@ const useFirebase = () => {
 
     const signInUsingFacebook = () => {
         setIsLoading(true);
-        const fbProvider = new FacebookAuthProvider();
 
         return signInWithPopup(auth, fbProvider)
-            // .finally(() => { setIsLoading(false) });
-            .then(result => {
-                setUser(result.user);
-            })
-            .finally(() => setIsLoading(false));
+            .finally(() => { setIsLoading(false) });
+            // .then(result => {
+            //     setUser(result.user);
+            // })
+            // .finally(() => setIsLoading(false));
     }
 
     const signInUsingGoogle = () => {
         setIsLoading(true);
-        const googleProvider = new GoogleAuthProvider();
 
         return signInWithPopup(auth, googleProvider)
             // .finally(() => { setIsLoading(false) });
