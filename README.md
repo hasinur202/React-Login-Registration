@@ -1,5 +1,5 @@
 # LOGIN REGISTRATION (REACT)
-Project Live link: [Click here](https://login-registration-78787.web.app/).
+Project Live link: [Click here](https://login-registration-78787.firebaseapp.com/).
 
 ## Technologies
 
