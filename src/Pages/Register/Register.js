@@ -48,7 +48,7 @@ const Register = () => {
 
     const handleRegistration = e => {
         e.preventDefault();
-        console.log(email, password);
+        // console.log(email, password);
         if (password.length < 6) {
           setError('Password Must be at least 6 characters long.')
           return;
@@ -67,11 +67,9 @@ const Register = () => {
     const registerNewUser = (email, password) => {
         createUserWithEmailAndPassword(auth, email, password)
           .then(result => {
-            const user = result.user;
-            console.log(user);
+            // const user = result.user;
             setError('');
             verifyEmail();
-            history.push(redirect_uri);
           })
           .catch(error => {
             setError(error.message);
@@ -79,10 +77,16 @@ const Register = () => {
       }
 
       const verifyEmail = () => {
-        sendEmailVerification(auth.currentUser)
-          .then(result => {
-            console.log(result);
-          })
+        sendEmailVerification(auth.currentUser);
+        auth.signOut();
+        setEmail('');
+        setPassword('');
+        setConfirmPassword('');
+        setError('A verification link has been sent to your email address. Before login verfiy your email first..!');
+
+        //   .then(result => {
+        //     console.log(result);
+        //   })
       }
     
     //   const handleResetPassword = () => {

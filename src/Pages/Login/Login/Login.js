@@ -60,9 +60,12 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email, password)
           .then(result => {
               const user = result.user;
-              console.log(user);
-              setError('');
-              history.push(redirect_uri);
+              if (user.emailVerified) {
+                  history.push(redirect_uri);
+                  setError('');
+              } else {
+                setError('Please verify your email first.')
+              }
           })
           .catch(error => {
             setError(error.message);
