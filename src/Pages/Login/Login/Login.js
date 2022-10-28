@@ -102,7 +102,7 @@ const Login = () => {
                 </div>
             </form>
             <div className="mt-4">
-                <Link to="/register">Forgot Password?</Link>
+                <Link to="#">Forgot Password?</Link>
                 <h5>Or</h5>
                 <button type="button" onClick={handleGoogleLogin} className="btn btn-light"><img style={{ height: '40px' }} src={google} alt='google' /> Continue With Google</button><br/>
                 <button type="button" onClick={handleFacebookLogin} className="btn btn-light mt-2"><img style={{ height: '40px' }} src={fb} alt='google' /> Continue With Facebook</button>
