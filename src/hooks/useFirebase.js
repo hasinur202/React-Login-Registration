@@ -15,11 +15,11 @@ const useFirebase = () => {
         const fbProvider = new FacebookAuthProvider();
 
         return signInWithPopup(auth, fbProvider)
-            .finally(() => { setIsLoading(false) });
-        //     .then(result => {
-        //         setUser(result.user);
-        //     })
-        //     .finally(() => setIsLoading(false));
+            // .finally(() => { setIsLoading(false) });
+            .then(result => {
+                setUser(result.user);
+            })
+            .finally(() => setIsLoading(false));
     }
 
     const signInUsingGoogle = () => {
@@ -27,11 +27,11 @@ const useFirebase = () => {
         const googleProvider = new GoogleAuthProvider();
 
         return signInWithPopup(auth, googleProvider)
-            .finally(() => { setIsLoading(false) });
-        //     .then(result => {
-        //         setUser(result.user);
-        //     })
-        //     .finally(() => setIsLoading(false));
+            // .finally(() => { setIsLoading(false) });
+            .then(result => {
+                setUser(result.user);
+            })
+            .finally(() => setIsLoading(false));
     }
 
     // observe user state change
@@ -46,11 +46,11 @@ const useFirebase = () => {
             setIsLoading(false);
         });
         return () => unsubscribed;
-    }, [auth])
+    }, [])
 
     const logOut = () => {
         setIsLoading(true);
-        signOut(auth)
+        return signOut(auth)
             .then(() => { })
             .finally(() => setIsLoading(false));
     }
