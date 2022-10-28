@@ -38,9 +38,10 @@ const Login = () => {
             .then(result => {
                 history.push(redirect_uri);
             })
-            .catch(error => {
-                setError(error.message);
-            })
+            history.push(redirect_uri);
+            // .catch(error => {
+            //     setError(error.message);
+            // })
         }
 
       const handleLogin = e => {
